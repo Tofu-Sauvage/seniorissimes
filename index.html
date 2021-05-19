@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather&Seniors</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-image: url("senior.jpg");
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: 100%;
+      }
+      .container {
+        background-color:rgba(255, 255, 255, 0.795) ;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-4 pt-4">
+      <h1 class="mb-4">Que faire aujourd'hui ?</h1>
+      <p class="lead">
+        Du vélo sous la pluie ou un scrabble par beau temps ? Plus jamais !
+      </p>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row"><i class="fas fa-city"></i></th>
+            <td>Votre ville</td>
+            <td><input type="text" id="city-name" /></td>
+          </tr>
+          <tr>
+            <th scope="row"><i class="fas fa-globe-europe"></i></th>
+            <td>Pays (facultatif)</td>
+            <td><input type="text" id="country-code" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <button
+        type="button"
+        class="btn btn-primary mb-4"
+        id="btnGetWeather"
+        onclick="getWeatherData()"
+      >
+        Lancer la recherche
+      </button>
+
+      <!-- Weather -->
+      <div id="resultDiv" style="margin-bottom: 20px"></div>
+
+      <!-- Activity -->
+      <div id="resultActi" style="margin-bottom: 20px"></div>
+
+      <!-- Refresh -->
+      <div id="buttonRefresh" style="margin-bottom: 20px"></div>
+    </div>
+
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let weatherConditions = new XMLHttpRequest();
+      let weatherResult;
+
+      function getWeatherData() {
+        let cityName = document.getElementById("city-name").value;
+        let countryCode = document.getElementById("country-code").value;
+
+        weatherConditions.open(
+          "GET",
+          `//api.openweathermap.org/data/2.5/weather?q=${cityName},${countryCode}&lang=fr&appid=4d8fb5b93d4af21d66a2948710284366&units=metric`,
+          true
+        );
+        weatherConditions.responseType = "text";
+        weatherConditions.send(null);
+
+        weatherConditions.onload = function () {
+          if (weatherConditions.status === 200) {
+            weatherResult = JSON.parse(weatherConditions.responseText);
+
+            // console.log(weatherResult);
+
+            let resultDiv = document.getElementById("resultDiv");
+            resultDiv.innerHTML = `${weatherResult.name}<img src="http://openweathermap.org/img/w/${weatherResult.weather[0].icon}.png"/><br>Température: ${weatherResult.main.temp}&deg;<br>Description: ${weatherResult.weather[0].description}<br>Ciel couvert à ${weatherResult.clouds.all}%<hr/>`;
+
+            let resultActi = document.getElementById("resultActi");
+            if (weatherResult.main.temp < 12) {
+              resultActi.innerHTML =
+                "Attention il fait froid, jouez au scrabble près d'un radiateur.";
+            } else {
+              resultActi.innerHTML =
+                "Il fait bon, sortez respirer le bon air, vous vivrez plus longtemps.";
+            }
+
+            let buttonrefresh = document.getElementById("buttonRefresh");
+            buttonRefresh.innerHTML =
+              "<button type='button' class='btn btn-primary mb-4' onClick='window.location.reload()'>Recommencer</button>";
+          } else {
+            alert(
+              "Il semble que les informations envoyées sont incorrectes, merci de vérifier et de renvoyer le formulaire."
+            );
+          }
+        };
+      }
+    </script>
+  </body>
+</html>
