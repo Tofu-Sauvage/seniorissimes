@@ -30,12 +30,12 @@ request.onload = function () {
   clubSudOwner.innerHTML = clubs.clubs[0].owner;
   clubSudAdress.innerHTML = clubs.clubs[0].adress;
 
-  clubNordName.innerHTML = clubs.clubs[1].name;
-  clubNordOwner.innerHTML = clubs.clubs[1].owner;
-  clubNordAdress.innerHTML = clubs.clubs[1].adress;
+  clubNordName.innerHTML = clubs.clubs[2].name;
+  clubNordOwner.innerHTML = clubs.clubs[2].owner;
+  clubNordAdress.innerHTML = clubs.clubs[2].adress;
 
-  clubBreizhName.innerHTML = clubs.clubs[2].name;
-  clubBreizhOwner.innerHTML = clubs.clubs[2].owner;
-  clubBreizhAdress.innerHTML = clubs.clubs[2].adress;
+  clubBreizhName.innerHTML = clubs.clubs[1].name;
+  clubBreizhOwner.innerHTML = clubs.clubs[1].owner;
+  clubBreizhAdress.innerHTML = clubs.clubs[1].adress;
 
 };
