@@ -1,0 +1,36 @@
+{
+    "clubs": [
+      {
+        "name": "Les Séniorissimes - Sud",
+        "type": "local",
+        "owner": "Didier BOURDON",
+        "adress": "12 rue de la fatigue, 13011 Marseille",
+        "email": "lesseniorissimes@gmail.com",
+        "phone": "04 91 10 11 12"
+      },
+      {
+        "name": "Les Séniorissimes - Bretagne",
+        "type": "local",
+        "owner": "Pascal LEGITIMUS",
+        "adress": "120 rue de la vieillesse, 56000 Vannes",
+        "email": "lesseniorissimes-bretagne@gmail.com",
+        "phone": "02 97 10 11 12"
+      },
+      {
+        "name": "Les Séniorissimes - Nord",
+        "type": "local",
+        "owner": "Bernard CAMPAN",
+        "adress": "53 rue du soleil, 62100 Calais",
+        "email": "lesseniorissimes-nord@gmail.com",
+        "phone": "03 61 10 11 12"
+      },
+      {
+        "name": "Les Séniorissimes",
+        "type": "header",
+        "owner": "Didier BOURDON",
+        "adress": "12 rue de la fatigue, 13011 Marseille",
+        "email": "lesseniorissimes@gmail.com",
+        "phone": "04 91 10 11 12"
+      }
+    ]
+}
