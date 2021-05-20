@@ -23,9 +23,12 @@ function getWeatherBreizh() {
       if (weatherResult.main.temp < 12) {
         resultActi.innerHTML =
           "Attention il fait froid, jouez au scrabble près d'un radiateur.";
+        $.getScript("loadActivitiesInt.js");
       } else {
         resultActi.innerHTML =
           "Il fait bon, sortez respirer le bon air, vous vivrez plus longtemps.";
+          $.getScript("loadActivitiesExt.js");
+          $.getScript("loadActivitiesInt.js");
       }
 
       let buttonrefresh = document.getElementById("buttonRefresh");
@@ -37,6 +40,7 @@ function getWeatherBreizh() {
       );
     }
   };
+  
 }
 
 //Pour les activités à Marseille
@@ -58,12 +62,16 @@ function getWeatherMarseille() {
       resultDiv.innerHTML = `${weatherResult.name}<img src="http://openweathermap.org/img/w/${weatherResult.weather[0].icon}.png"/><br>Température: ${weatherResult.main.temp}&deg;<br>Description: ${weatherResult.weather[0].description}<br>Ciel couvert à ${weatherResult.clouds.all}%<hr/>`;
 
       let resultActi = document.getElementById("resultActi");
+      document.getElementById('activitiesList').innerHTML = ""
       if (weatherResult.main.temp < 12) {
         resultActi.innerHTML =
           "Attention il fait froid, jouez au scrabble près d'un radiateur.";
+          $.getScript("loadActivitiesInt.js");
       } else {
         resultActi.innerHTML =
           "Il fait bon, sortez respirer le bon air, vous vivrez plus longtemps.";
+          $.getScript("loadActivitiesExt.js");
+          $.getScript("loadActivitiesInt.js");
       }
 
       let buttonrefresh = document.getElementById("buttonRefresh");
@@ -98,9 +106,13 @@ function getWeatherCalais() {
       if (weatherResult.main.temp < 12) {
         resultActi.innerHTML =
           "Attention il fait froid, jouez au scrabble près d'un radiateur.";
+          $.getScript("loadActivitiesInt.js");
       } else {
         resultActi.innerHTML =
           "Il fait bon, sortez respirer le bon air, vous vivrez plus longtemps.";
+          $.getScript("loadActivitiesExt.js");
+          $.getScript("loadActivitiesInt.js");
+          
       }
 
       let buttonrefresh = document.getElementById("buttonRefresh");
