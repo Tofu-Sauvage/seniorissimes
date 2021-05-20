@@ -89,3 +89,10 @@ h6 {
     opacity: 1;
     visibility: visible;
   }
+
+  /* Bouton */
+  .btn-primary {
+    color: #fff;
+    background-color: #c45345;
+    border-color:  #c45345;
+}
