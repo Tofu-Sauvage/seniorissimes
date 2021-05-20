@@ -18,6 +18,7 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    
   </head>
   <body>
     <!-- Container principal -->
@@ -92,11 +93,12 @@
       <div id="buttonRefresh" style="margin-bottom: 20px"></div>
     </div>
 
-    <div id="includedFormContact" class="container mt-4"></div>
     <div class="container mt-4 pt-4">
-      <div id="activitiesList" class="row">
-      </div>
+      <div id="activitiesList" class="row"></div>
     </div>
+
+    <!-- Form Contact -->
+    <div id="includedFormContact" class="container mt-4"></div>
 
     <!-- JS CLUBS -->
     <script src="clubs.js"></script>
@@ -119,6 +121,5 @@
         $("#includedFormContact").load("./templates/formContact.html");
       });
     </script>
-  
   </body>
 </html>

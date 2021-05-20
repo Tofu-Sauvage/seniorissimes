@@ -27,41 +27,66 @@
 
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationCustomUsername">Club destinataire</label>
+      <label>Club destinataire</label>
       <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroupPrepend">?</span>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios1"
+            value="option1"
+            checked
+          />
+          <label id="clubSud" class="form-check-label" for="exampleRadios1">
+            Sud- Marseille
+          </label>
         </div>
-        <input
-          type="text"
-          class="form-control"
-          id="validationCustomUsername"
-          aria-describedby="inputGroupPrepend"
-          required
-        />
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios2"
+            value="option2"
+          />
+          <label id="clubNord" class="form-check-label" for="exampleRadios2">
+            Nord - Calais
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios3"
+            value="option3"
+          />
+          <label id="clubBreizh" class="form-check-label" for="exampleRadios3">
+            Bretagne - Vannes
+          </label>
+        </div>
+
         <div class="invalid-feedback">Vous devez choisir un club</div>
         <div class="valid-feedback">Donnée valide</div>
       </div>
     </div>
 
     <div class="col-md-6 mb-3">
-      <label for="validationCustom03">Votre adresse email</label>
-      <input
-        type="text"
-        class="form-control"
-        id="validationCustom03"
-        required
-      />
-      <div class="invalid-feedback">Vous devez entrer une adresse valide</div>
-      <div class="valid-feedback">Donnée valide</div>
+      <div class="form-group">
+        <label for="inputEmail">Email</label>
+        <input type="email" class="form-control" id="inputEmail" required />
+        <div class="invalid-feedback">Vous devez entrer une adresse valide</div>
+        <div class="valid-feedback">Donnée valide</div>
+      </div>
     </div>
   </div>
 
   <div class="form-group">
-    <label for="validationCustom04">Votre message :</label>
-    <textarea class="form-control" rows="5" id="validationCustom04"></textarea>
+    <label for="messageArea">Votre message :</label>
+    <textarea class="form-control" rows="5" id="messageArea" required></textarea>
     <div class="invalid-feedback">
-      Votre message doit contenir plus de 30 caractères
+      Votre message ne peut être vide
     </div>
     <div class="valid-feedback">Donnée valide</div>
   </div>
@@ -71,12 +96,14 @@
 
 <script>
   (function () {
-    "use strict";
+    ("use strict");
     window.addEventListener(
       "load",
+
       function () {
         // Fetch all the forms we want to apply custom Bootstrap validation styles to
         var forms = document.getElementsByClassName("needs-validation");
+     
         // Loop over them and prevent submission
         var validation = Array.prototype.filter.call(forms, function (form) {
           form.addEventListener(
