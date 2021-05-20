@@ -1,0 +1,98 @@
+<form class="needs-validation" novalidate>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom01">Prénom</label>
+      <input
+        type="text"
+        class="form-control"
+        id="validationCustom01"
+        required
+      />
+      <div class="invalid-feedback">Vous devez entrer votre prénom</div>
+      <div class="valid-feedback">Donnée valide</div>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom02">Nom</label>
+      <input
+        type="text"
+        class="form-control"
+        id="validationCustom02"
+        required
+      />
+      <div class="invalid-feedback">Vous devez entrer votre nom</div>
+      <div class="valid-feedback">Donnée valide</div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustomUsername">Club destinataire</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">?</span>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          id="validationCustomUsername"
+          aria-describedby="inputGroupPrepend"
+          required
+        />
+        <div class="invalid-feedback">Vous devez choisir un club</div>
+        <div class="valid-feedback">Donnée valide</div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom03">Votre adresse email</label>
+      <input
+        type="text"
+        class="form-control"
+        id="validationCustom03"
+        required
+      />
+      <div class="invalid-feedback">Vous devez entrer une adresse valide</div>
+      <div class="valid-feedback">Donnée valide</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="validationCustom04">Votre message :</label>
+    <textarea class="form-control" rows="5" id="validationCustom04"></textarea>
+    <div class="invalid-feedback">
+      Votre message doit contenir plus de 30 caractères
+    </div>
+    <div class="valid-feedback">Donnée valide</div>
+  </div>
+
+  <button class="btn btn-primary btn-sm" type="submit">Envoyer</button>
+</form>
+
+<script>
+  (function () {
+    "use strict";
+    window.addEventListener(
+      "load",
+      function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName("needs-validation");
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      },
+      false
+    );
+  })();
+</script>

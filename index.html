@@ -92,11 +92,16 @@
       <div id="buttonRefresh" style="margin-bottom: 20px"></div>
     </div>
 
+    <div id="includedFormContact" class="container mt-4"></div>
+
     <!-- JS CLUBS -->
     <script src="clubs.js"></script>
 
     <!-- JS ACTIVITIES -->
     <script src="activities.js"></script>
+
+    <!-- JS FORM CONTACT -->
+    <script src="./asserts/formContact.js"></script>
 
     <!-- jQuery CDN -->
     <script
@@ -104,5 +109,12 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"
     ></script>
+    <!-- in order to include formContact.html -->
+    <script>
+      $(function () {
+        $("#includedFormContact").load("./templates/formContact.html");
+      });
+    </script>
+  
   </body>
 </html>
