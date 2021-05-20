@@ -26,7 +26,7 @@
       <!-- Clubs -->
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card" style="width: 18rem">
+          <div class="card" style="">
             <div id="club-sud-img"></div>
             <div class="card-body">
               <h5 id="club-sud-name" class="card-title"></h5>
@@ -34,7 +34,7 @@
               <p id="club-sud-adress" class="card-text"></p>
               <button
                 type="button"
-                class="btn btn-primary mb-4"
+                class="btn btn-primary"
                 id="btnGetWeather"
                 onclick="getWeatherMarseille()"
               >
@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card" style="width: 18rem">
+          <div class="card" style="">
             <div id="club-nord-img"></div>
             <div class="card-body">
               <h5 id="club-nord-name" class="card-title"></h5>
@@ -52,7 +52,7 @@
               <p id="club-nord-adress" class="card-text"></p>
               <button
                 type="button"
-                class="btn btn-primary mb-4"
+                class="btn btn-primary"
                 id="btnGetWeather"
                 onclick="getWeatherCalais()"
               >
@@ -62,7 +62,7 @@
           </div>
         </div>
         <div id="club-bretagne" class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card" style="width: 18rem">
+          <div class="card" style="">
             <div id="club-breizh-img"></div>
             <div class="card-body">
               <h5 id="club-breizh-name" class="card-title"></h5>
@@ -70,7 +70,7 @@
               <p id="club-breizh-adress" class="card-text"></p>
               <button
                 type="button"
-                class="btn btn-primary mb-4"
+                class="btn btn-primary"
                 id="btnGetWeather"
                 onclick="getWeatherBreizh()"
               >
@@ -104,6 +104,7 @@
     <script src="clubs.js"></script>
 
     <!-- JS ACTIVITIES -->
+    <script src="functions.js"></script>
     <script src="activities.js"></script>
 
     <!-- JS FORM CONTACT -->
@@ -115,11 +116,19 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"
     ></script>
+
+    <style>
+    .description {
+      text-transform: capitalize;
+    }
+    </style>
+
     <!-- in order to include formContact.html -->
     <script>
       $(function () {
         $("#includedFormContact").load("./templates/formContact.html");
       });
     </script>
+    
   </body>
 </html>
