@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -126,3 +127,139 @@
     </script>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les seniorissimes</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    
+  </head>
+  <body>
+    <!-- Container principal -->
+    <div class="container mt-4 pt-4">
+      <!-- Clubs -->
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="card" style="">
+            <div id="club-sud-img"></div>
+            <div class="card-body">
+              <h5 id="club-sud-name" class="card-title"></h5>
+              <p id="club-sud-owner" class="card-text"></p>
+              <p id="club-sud-adress" class="card-text"></p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="btnGetWeather"
+                onclick="getWeatherMarseille()"
+              >
+                Nos activités
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="card" style="">
+            <div id="club-nord-img"></div>
+            <div class="card-body">
+              <h5 id="club-nord-name" class="card-title"></h5>
+              <p id="club-nord-owner" class="card-text"></p>
+              <p id="club-nord-adress" class="card-text"></p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="btnGetWeather"
+                onclick="getWeatherCalais()"
+              >
+                Nos activités
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="club-bretagne" class="col-lg-4 col-md-4 col-sm-12">
+          <div class="card" style="">
+            <div id="club-breizh-img"></div>
+            <div class="card-body">
+              <h5 id="club-breizh-name" class="card-title"></h5>
+              <p id="club-breizh-owner" class="card-text"></p>
+              <p id="club-breizh-adress" class="card-text"></p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="btnGetWeather"
+                onclick="getWeatherBreizh()"
+              >
+                Nos activités
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4 pt-4">
+      <!-- Weather -->
+      <div id="resultDiv" style="margin-bottom: 20px"></div>
+
+      <!-- Activity -->
+      <div id="resultActi" style="margin-bottom: 20px"></div>
+
+      <!-- Refresh -->
+      <div id="buttonRefresh" style="margin-bottom: 20px"></div>
+    </div>
+
+    <div class="container mt-4 pt-4">
+      <div id="activitiesList" class="row"></div>
+    </div>
+
+    <!-- Form Contact -->
+    <div id="includedFormContact" class="container mt-4"></div>
+
+    <!-- JS CLUBS -->
+    <script src="clubs.js"></script>
+
+    <!-- JS ACTIVITIES -->
+    <script src="functions.js"></script>
+    <script src="activities.js"></script>
+
+    <!-- JS FORM CONTACT -->
+    <script src="./asserts/formContact.js"></script>
+
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+    .description {
+      text-transform: capitalize;
+    }
+    </style>
+
+    <!-- in order to include formContact.html -->
+    <script>
+      $(function () {
+        $("#includedFormContact").load("./templates/formContact.html");
+      });
+    </script>
+    
+  </body>
+</html>
+>>>>>>> b98a84c1c5566f7035c58fbe8ad5fc2cf7687910

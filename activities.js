@@ -16,11 +16,61 @@ function getWeatherBreizh() {
     if (weatherConditions.status === 200) {
       weatherResult = JSON.parse(weatherConditions.responseText);
 
+      // call functions.js
+      let HourWeatherSunrise = formatDate(weatherResult.sys.sunrise) ;
+      let HourWeatherSunset = formatDate(weatherResult.sys.sunset) ;
+      let windDirection = compass(weatherResult.wind.deg);
+
+      console.log(HourWeatherSunrise);
+      console.log(HourWeatherSunset);
+            
       let resultDiv = document.getElementById("resultDiv");
-      resultDiv.innerHTML = `${weatherResult.name}<img src="http://openweathermap.org/img/w/${weatherResult.weather[0].icon}.png"/><br>Température: ${weatherResult.main.temp}&deg;<br>Description: ${weatherResult.weather[0].description}<br>Ciel couvert à ${weatherResult.clouds.all}%<hr/>`;
+      resultDiv.innerHTML = `
+      <div class="card">
+        <div class="row no-gutters border rounded">
+          <div class="col-md-3 d-flex justify-content-center align-items-center">
+            <img src="http://openweathermap.org/img/wn/${weatherResult.weather[0].icon}@4x.png"/>
+          </div>
+          <div class="col-md-9">
+            <div class="card-body pb-0">
+                <h2 class="card-title mb-0">${weatherResult.name}</h2>
+            </div>
+            <div class="col-md-12 pl-0">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card-body">
+                    <p class="card-text mb-auto">Température: ${weatherResult.main.temp}&deg;C</p>
+                    <p class="card-text">Description: ${weatherResult.weather[0].description}</p>
+                    <p class="card-text mb-auto">Ciel couvert à ${weatherResult.clouds.all} %</p>
+                    <p class="card-text">Humidité à ${weatherResult.main.humidity} %</p>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card-body">
+                    <p class="card-text mb-auto">Maximum : ${weatherResult.main.temp_max}&deg;C</p>
+                    <p class="card-text">Maximum : ${weatherResult.main.temp_min}&deg;C</p>
+                    <p class="card-text mb-auto">Lever du soleil : ${HourWeatherSunrise}</p>
+                    <p class="card-text">Coucher du soleil : ${HourWeatherSunset}</p>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card-body">
+                    <p class="card-text mb-auto">Vent : ${weatherResult.wind.speed} m/s</p>
+                    <p class="card-text">Direction : ${windDirection}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      `;
 
       let resultActi = document.getElementById("resultActi");
-      if (weatherResult.main.temp < 12) {
+      
+      if (weatherResult.main.temp < 12 || weatherResult.main.humidity >= 70) {
         resultActi.innerHTML =
           "Attention il fait froid, jouez au scrabble près d'un radiateur.";
         $.getScript("loadActivitiesInt.js");
@@ -58,12 +108,61 @@ function getWeatherMarseille() {
     if (weatherConditions.status === 200) {
       weatherResult = JSON.parse(weatherConditions.responseText);
 
+      // call functions.js
+      let HourWeatherSunrise = formatDate(weatherResult.sys.sunrise) ;
+      let HourWeatherSunset = formatDate(weatherResult.sys.sunset) ;
+      let windDirection = compass(weatherResult.wind.deg);
+
+      console.log(HourWeatherSunrise);
+      console.log(HourWeatherSunset);
+            
       let resultDiv = document.getElementById("resultDiv");
-      resultDiv.innerHTML = `${weatherResult.name}<img src="http://openweathermap.org/img/w/${weatherResult.weather[0].icon}.png"/><br>Température: ${weatherResult.main.temp}&deg;<br>Description: ${weatherResult.weather[0].description}<br>Ciel couvert à ${weatherResult.clouds.all}%<hr/>`;
+      resultDiv.innerHTML = `
+      <div class="card">
+        <div class="row no-gutters border rounded">
+          <div class="col-md-3 d-flex justify-content-center align-items-center">
+            <img src="http://openweathermap.org/img/wn/${weatherResult.weather[0].icon}@4x.png"/>
+          </div>
+          <div class="col-md-9">
+            <div class="card-body pb-0">
+                <h2 class="card-title mb-0">${weatherResult.name}</h2>
+            </div>
+            <div class="col-md-12 pl-0">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card-body">
+                    <p class="card-text mb-auto">Température: ${weatherResult.main.temp}&deg;C</p>
+                    <p class="card-text">Description: ${weatherResult.weather[0].description}</p>
+                    <p class="card-text mb-auto">Ciel couvert à ${weatherResult.clouds.all} %</p>
+                    <p class="card-text">Humidité à ${weatherResult.main.humidity} %</p>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card-body">
+                    <p class="card-text mb-auto">Maximum : ${weatherResult.main.temp_max}&deg;C</p>
+                    <p class="card-text">Maximum : ${weatherResult.main.temp_min}&deg;C</p>
+                    <p class="card-text mb-auto">Lever du soleil : ${HourWeatherSunrise}</p>
+                    <p class="card-text">Coucher du soleil : ${HourWeatherSunset}</p>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card-body">
+                    <p class="card-text mb-auto">Vent : ${weatherResult.wind.speed} m/s</p>
+                    <p class="card-text">Direction : ${windDirection}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      `;
 
       let resultActi = document.getElementById("resultActi");
       document.getElementById('activitiesList').innerHTML = ""
-      if (weatherResult.main.temp < 12) {
+      if (weatherResult.main.temp < 12 || weatherResult.main.humidity >= 70) {
         resultActi.innerHTML =
           "Attention il fait froid, jouez au scrabble près d'un radiateur.";
           $.getScript("loadActivitiesInt.js");
@@ -99,11 +198,60 @@ function getWeatherCalais() {
     if (weatherConditions.status === 200) {
       weatherResult = JSON.parse(weatherConditions.responseText);
 
+      // call functions.js
+      let HourWeatherSunrise = formatDate(weatherResult.sys.sunrise) ;
+      let HourWeatherSunset = formatDate(weatherResult.sys.sunset) ;
+      let windDirection = compass(weatherResult.wind.deg);
+
+      console.log(HourWeatherSunrise);
+      console.log(HourWeatherSunset);
+            
       let resultDiv = document.getElementById("resultDiv");
-      resultDiv.innerHTML = `${weatherResult.name}<img src="http://openweathermap.org/img/w/${weatherResult.weather[0].icon}.png"/><br>Température: ${weatherResult.main.temp}&deg;<br>Description: ${weatherResult.weather[0].description}<br>Ciel couvert à ${weatherResult.clouds.all}%<hr/>`;
+      resultDiv.innerHTML = `
+      <div class="card">
+        <div class="row no-gutters border rounded">
+          <div class="col-md-3 d-flex justify-content-center align-items-center">
+            <img src="http://openweathermap.org/img/wn/${weatherResult.weather[0].icon}@4x.png"/>
+          </div>
+          <div class="col-md-9">
+            <div class="card-body pb-0">
+                <h2 class="card-title mb-0">${weatherResult.name}</h2>
+            </div>
+            <div class="col-md-12 pl-0">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card-body">
+                    <p class="card-text mb-auto">Température: ${weatherResult.main.temp}&deg;C</p>
+                    <p class="card-text">Description: ${weatherResult.weather[0].description}</p>
+                    <p class="card-text mb-auto">Ciel couvert à ${weatherResult.clouds.all} %</p>
+                    <p class="card-text">Humidité à ${weatherResult.main.humidity} %</p>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card-body">
+                    <p class="card-text mb-auto">Maximum : ${weatherResult.main.temp_max}&deg;C</p>
+                    <p class="card-text">Maximum : ${weatherResult.main.temp_min}&deg;C</p>
+                    <p class="card-text mb-auto">Lever du soleil : ${HourWeatherSunrise}</p>
+                    <p class="card-text">Coucher du soleil : ${HourWeatherSunset}</p>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card-body">
+                    <p class="card-text mb-auto">Vent : ${weatherResult.wind.speed} m/s</p>
+                    <p class="card-text">Direction : ${windDirection}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      `;
 
       let resultActi = document.getElementById("resultActi");
-      if (weatherResult.main.temp < 12) {
+      if (weatherResult.main.temp < 12 || weatherResult.main.humidity >= 70) {
         resultActi.innerHTML =
           "Attention il fait froid, jouez au scrabble près d'un radiateur.";
           $.getScript("loadActivitiesInt.js");
