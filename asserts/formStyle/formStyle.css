@@ -1,0 +1,13 @@
+#includedFormContact {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.742),
+        white
+      ),
+      url("senior_form.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    height: 60vh;
+  }
