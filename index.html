@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Les seniorissimes</title>
+    <!-- GG Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -19,11 +25,12 @@
       crossorigin="anonymous"
     />
     <!-- CSS custom -->
-    <link rel="stylesheet" href="./asserts/generalStyle/custom.css"/>
-    <link rel="stylesheet" href="./asserts/formStyle/formStyle.css"/>
-    
+    <link rel="stylesheet" href="./asserts/generalStyle/custom.css" />
+    <link rel="stylesheet" href="./asserts/formStyle/formStyle.css" />
   </head>
   <body>
+    <!-- Header -->
+    <div id="includedHeader" class="container-fluid m-0"></div>
     <!-- Container principal -->
     <div class="container mt-4 pt-4">
       <!-- Clubs -->
@@ -102,7 +109,9 @@
 
     <!-- Form Contact -->
     <div id="includedFormContact" class="container-fluid mt-4"></div>
-
+    
+    <!-- Footer -->
+    <div id="includedFooter" class="container-fluid"></div>
     <!-- JS CLUBS -->
     <script src="clubs.js"></script>
 
@@ -118,17 +127,18 @@
     ></script>
 
     <style>
-    .description {
-      text-transform: capitalize;
-    }
+      .description {
+        text-transform: capitalize;
+      }
     </style>
 
     <!-- in order to include formContact.html -->
     <script>
       $(function () {
         $("#includedFormContact").load("./templates/formContact.html");
+        $("#includedHeader").load("./templates/header.html");
+        $("#includedFooter").load("./templates/footer.html");
       });
     </script>
-    
   </body>
 </html>

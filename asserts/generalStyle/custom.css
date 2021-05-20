@@ -1,3 +1,52 @@
-h1, h2, h3, h4, h5, h6 {
-    text-align: center!important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center !important;
+  font-family: "Roboto Condensed", sans-serif !important;
+}
+
+#includedHeader {
+  background-image: url("senior_header.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 40vh;
+  font-family: "Roboto Condensed", sans-serif !important;
+}
+
+#includedHeader h1 {
+  padding-top: 3%;
+  font-weight: bolder;
+}
+
+#includedFooter {
+  padding-top: 3%;
+  min-height: 15vh;
+  background-color: #c45345;
+  color: white;
+}
+
+#includedFooter a {
+  color: white;
+}
+
+#includedFooter img {
+  border-radius: 50%;
+  width: 60%;
+  border: solid white 3px;
+}
+
+#includedFooter span {
+  text-decoration: underline;
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-size: large;
+}
+
+#footer {
+  width: 50vh;
+  justify-content: center;
+  margin: 0 auto;
 }
