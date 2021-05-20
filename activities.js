@@ -3,6 +3,12 @@ let weatherResult;
 
 //Pour les activités à Vannes
 function getWeatherBreizh() {
+  // RESET quand liste d'activités déja généré
+  let requestJsonURLInt = null;
+  let requestJsonInt = null;
+  let requestJsonURLExt = null;
+  let requestJsonExt = null;
+
   let cityName = "Vannes";
   weatherConditions.open(
     "GET",
@@ -20,9 +26,6 @@ function getWeatherBreizh() {
       let HourWeatherSunrise = formatDate(weatherResult.sys.sunrise) ;
       let HourWeatherSunset = formatDate(weatherResult.sys.sunset) ;
       let windDirection = compass(weatherResult.wind.deg);
-
-      console.log(HourWeatherSunrise);
-      console.log(HourWeatherSunset);
             
       let resultDiv = document.getElementById("resultDiv");
       resultDiv.innerHTML = `
@@ -39,7 +42,7 @@ function getWeatherBreizh() {
               <div class="row">
                 <div class="col-md-4">
                   <div class="card-body">
-                    <p class="card-text mb-auto">Température: ${weatherResult.main.temp}&deg;C</p>
+                    <p class="card-text mb-auto">Température: ${Math.round(weatherResult.main.temp)}&deg;C</p>
                     <p class="card-text">Description: ${weatherResult.weather[0].description}</p>
                     <p class="card-text mb-auto">Ciel couvert à ${weatherResult.clouds.all} %</p>
                     <p class="card-text">Humidité à ${weatherResult.main.humidity} %</p>
@@ -48,8 +51,8 @@ function getWeatherBreizh() {
 
                 <div class="col-md-4">
                   <div class="card-body">
-                    <p class="card-text mb-auto">Maximum : ${weatherResult.main.temp_max}&deg;C</p>
-                    <p class="card-text">Maximum : ${weatherResult.main.temp_min}&deg;C</p>
+                    <p class="card-text mb-auto">Maximum : ${Math.round(weatherResult.main.temp_max)}&deg;C</p>
+                    <p class="card-text">Maximum : ${Math.round(weatherResult.main.temp_min)}&deg;C</p>
                     <p class="card-text mb-auto">Lever du soleil : ${HourWeatherSunrise}</p>
                     <p class="card-text">Coucher du soleil : ${HourWeatherSunset}</p>
                   </div>
@@ -57,7 +60,7 @@ function getWeatherBreizh() {
 
                 <div class="col-md-4">
                   <div class="card-body">
-                    <p class="card-text mb-auto">Vent : ${weatherResult.wind.speed} m/s</p>
+                    <p class="card-text mb-auto">Vent : ${Math.round(weatherResult.wind.speed)} m/s</p>
                     <p class="card-text">Direction : ${windDirection}</p>
                   </div>
                 </div>
@@ -69,7 +72,7 @@ function getWeatherBreizh() {
       `;
 
       let resultActi = document.getElementById("resultActi");
-      
+      document.getElementById('activitiesList').innerHTML = ""
       if (weatherResult.main.temp < 12 || weatherResult.main.humidity >= 70) {
         resultActi.innerHTML =
           "Attention il fait froid, jouez au scrabble près d'un radiateur.";
@@ -95,6 +98,12 @@ function getWeatherBreizh() {
 
 //Pour les activités à Marseille
 function getWeatherMarseille() {
+  // RESET quand liste d'activités déja généré
+  let requestJsonURLInt = null;
+  let requestJsonInt = null;
+  let requestJsonURLExt = null;
+  let requestJsonExt = null;
+
   let cityName = "Marseille";
   weatherConditions.open(
     "GET",
@@ -112,9 +121,6 @@ function getWeatherMarseille() {
       let HourWeatherSunrise = formatDate(weatherResult.sys.sunrise) ;
       let HourWeatherSunset = formatDate(weatherResult.sys.sunset) ;
       let windDirection = compass(weatherResult.wind.deg);
-
-      console.log(HourWeatherSunrise);
-      console.log(HourWeatherSunset);
             
       let resultDiv = document.getElementById("resultDiv");
       resultDiv.innerHTML = `
@@ -131,25 +137,25 @@ function getWeatherMarseille() {
               <div class="row">
                 <div class="col-md-4">
                   <div class="card-body">
-                    <p class="card-text mb-auto">Température: ${weatherResult.main.temp}&deg;C</p>
-                    <p class="card-text">Description: ${weatherResult.weather[0].description}</p>
-                    <p class="card-text mb-auto">Ciel couvert à ${weatherResult.clouds.all} %</p>
-                    <p class="card-text">Humidité à ${weatherResult.main.humidity} %</p>
-                  </div>
+                  <p class="card-text mb-auto">Température: ${Math.round(weatherResult.main.temp)}&deg;C</p>
+                  <p class="card-text">Description: ${weatherResult.weather[0].description}</p>
+                  <p class="card-text mb-auto">Ciel couvert à ${weatherResult.clouds.all} %</p>
+                  <p class="card-text">Humidité à ${weatherResult.main.humidity} %</p>
                 </div>
+              </div>
 
-                <div class="col-md-4">
-                  <div class="card-body">
-                    <p class="card-text mb-auto">Maximum : ${weatherResult.main.temp_max}&deg;C</p>
-                    <p class="card-text">Maximum : ${weatherResult.main.temp_min}&deg;C</p>
-                    <p class="card-text mb-auto">Lever du soleil : ${HourWeatherSunrise}</p>
-                    <p class="card-text">Coucher du soleil : ${HourWeatherSunset}</p>
-                  </div>
+              <div class="col-md-4">
+                <div class="card-body">
+                  <p class="card-text mb-auto">Maximum : ${Math.round(weatherResult.main.temp_max)}&deg;C</p>
+                  <p class="card-text">Maximum : ${Math.round(weatherResult.main.temp_min)}&deg;C</p>
+                  <p class="card-text mb-auto">Lever du soleil : ${HourWeatherSunrise}</p>
+                  <p class="card-text">Coucher du soleil : ${HourWeatherSunset}</p>
                 </div>
+              </div>
 
-                <div class="col-md-4">
-                  <div class="card-body">
-                    <p class="card-text mb-auto">Vent : ${weatherResult.wind.speed} m/s</p>
+              <div class="col-md-4">
+                <div class="card-body">
+                  <p class="card-text mb-auto">Vent : ${Math.round(weatherResult.wind.speed)} m/s</p>
                     <p class="card-text">Direction : ${windDirection}</p>
                   </div>
                 </div>
@@ -185,6 +191,12 @@ function getWeatherMarseille() {
 }
 //Pour les activités à Calais
 function getWeatherCalais() {
+  // RESET quand liste d'activités déja généré
+  let requestJsonURLInt = null;
+  let requestJsonInt = null;
+  let requestJsonURLExt = null;
+  let requestJsonExt = null;
+
   let cityName = "Calais";
   weatherConditions.open(
     "GET",
@@ -202,9 +214,6 @@ function getWeatherCalais() {
       let HourWeatherSunrise = formatDate(weatherResult.sys.sunrise) ;
       let HourWeatherSunset = formatDate(weatherResult.sys.sunset) ;
       let windDirection = compass(weatherResult.wind.deg);
-
-      console.log(HourWeatherSunrise);
-      console.log(HourWeatherSunset);
             
       let resultDiv = document.getElementById("resultDiv");
       resultDiv.innerHTML = `
@@ -221,25 +230,25 @@ function getWeatherCalais() {
               <div class="row">
                 <div class="col-md-4">
                   <div class="card-body">
-                    <p class="card-text mb-auto">Température: ${weatherResult.main.temp}&deg;C</p>
-                    <p class="card-text">Description: ${weatherResult.weather[0].description}</p>
-                    <p class="card-text mb-auto">Ciel couvert à ${weatherResult.clouds.all} %</p>
-                    <p class="card-text">Humidité à ${weatherResult.main.humidity} %</p>
-                  </div>
+                  <p class="card-text mb-auto">Température: ${Math.round(weatherResult.main.temp)}&deg;C</p>
+                  <p class="card-text">Description: ${weatherResult.weather[0].description}</p>
+                  <p class="card-text mb-auto">Ciel couvert à ${weatherResult.clouds.all} %</p>
+                  <p class="card-text">Humidité à ${weatherResult.main.humidity} %</p>
                 </div>
+              </div>
 
-                <div class="col-md-4">
-                  <div class="card-body">
-                    <p class="card-text mb-auto">Maximum : ${weatherResult.main.temp_max}&deg;C</p>
-                    <p class="card-text">Maximum : ${weatherResult.main.temp_min}&deg;C</p>
-                    <p class="card-text mb-auto">Lever du soleil : ${HourWeatherSunrise}</p>
-                    <p class="card-text">Coucher du soleil : ${HourWeatherSunset}</p>
-                  </div>
+              <div class="col-md-4">
+                <div class="card-body">
+                  <p class="card-text mb-auto">Maximum : ${Math.round(weatherResult.main.temp_max)}&deg;C</p>
+                  <p class="card-text">Maximum : ${Math.round(weatherResult.main.temp_min)}&deg;C</p>
+                  <p class="card-text mb-auto">Lever du soleil : ${HourWeatherSunrise}</p>
+                  <p class="card-text">Coucher du soleil : ${HourWeatherSunset}</p>
                 </div>
+              </div>
 
-                <div class="col-md-4">
-                  <div class="card-body">
-                    <p class="card-text mb-auto">Vent : ${weatherResult.wind.speed} m/s</p>
+              <div class="col-md-4">
+                <div class="card-body">
+                  <p class="card-text mb-auto">Vent : ${Math.round(weatherResult.wind.speed)} m/s</p>
                     <p class="card-text">Direction : ${windDirection}</p>
                   </div>
                 </div>
@@ -251,6 +260,7 @@ function getWeatherCalais() {
       `;
 
       let resultActi = document.getElementById("resultActi");
+      document.getElementById('activitiesList').innerHTML = ""
       if (weatherResult.main.temp < 12 || weatherResult.main.humidity >= 70) {
         resultActi.innerHTML =
           "Attention il fait froid, jouez au scrabble près d'un radiateur.";

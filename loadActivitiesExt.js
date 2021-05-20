@@ -1,7 +1,8 @@
 // le nom des variables des requètes différent pour ne pas entrer en conflit avec le reste du script en amont
 
-let requestJsonURLExt = "activities.json";
-let requestJsonExt = new XMLHttpRequest();
+// variables déja introduite au début de chaque fonctions de activities.js
+ requestJsonURLExt = "activities.json";
+ requestJsonExt = new XMLHttpRequest();
 
   requestJsonExt.open("GET", requestJsonURLExt);
   requestJsonExt.responseType = "json";
@@ -24,5 +25,6 @@ let requestJsonExt = new XMLHttpRequest();
       html += `</div>`
     });
 
-    document.getElementById('activitiesList').innerHTML += html;
+    document.getElementById('activitiesList').innerHTML = html;
+    console.log(html);
   }

@@ -1,7 +1,8 @@
 // le nom des variables des requètes différent pour ne pas entrer en conflit avec le reste du script en amont
 
-let requestJsonURLInt = "activities.json";
-let requestJsonInt = new XMLHttpRequest();
+// variables déja introduite au début de chaque fonctions de activities.js
+ requestJsonURLInt = "activities.json";
+ requestJsonInt = new XMLHttpRequest();
 
   requestJsonInt.open("GET", requestJsonURLInt);
   requestJsonInt.responseType = "json";
@@ -25,4 +26,5 @@ let requestJsonInt = new XMLHttpRequest();
     });
 
     document.getElementById('activitiesList').innerHTML += html;
+    console.log(html);
   }
