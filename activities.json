@@ -2,59 +2,59 @@
   "int-activities": [
     {
       "name": "Loisirs créatifs",
-      "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
+      "img": "img/activiteClub/loisirsCrea.jpg",
       "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
     },
     {
       "name": "Puzzles",
-      "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
+      "img": "img/activiteClub/puzzle.jpg",
       "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
     },
     {
       "name": "Lecture",
-      "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
+      "img": "img/activiteClub/lecture.jpg",
       "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
     },
     {
       "name": "Relaxation",
-      "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
+      "img": "img/activiteClub/relaxation.jpg",
       "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
     },
     {
       "name": "Cuisine",
-      "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
+      "img": "img/activiteClub/cuisine.jpg",
       "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
     },
     {
       "name": "Jeux de société",
-      "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
+      "img": "img/activiteClub/jeux.jpg",
       "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
     },
     {
       "name": "Visite de musée/expo (extérieur au club)",
-      "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
+      "img": "img/activiteClub/musee.jpg",
       "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
     }
   ],
   "ext-activities": [
     {
       "name": "Balade à vélo",
-      "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
+      "img": "img/activiteClub/balladeVelo.jpg",
       "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
     },
     {
       "name": "Jardinage",
-      "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
+      "img": "img/activiteClub/jardinage.jpg",
       "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
     },
     {
       "name": "Bricolage (établi dehors)",
-      "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
+      "img": "img/activiteClub/bricolage.jpg",
       "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
     },
     {
       "name": "Marche",
-      "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
+      "img": "img/activiteClub/marche.jpg",
       "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
     }
   ]
