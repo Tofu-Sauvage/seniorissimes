@@ -27,8 +27,15 @@
     <!-- CSS custom -->
     <link rel="stylesheet" href="./asserts/generalStyle/custom.css" />
     <link rel="stylesheet" href="./asserts/formStyle/formStyle.css" />
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
+    <!-- Back to top button -->
+    <p id="backToTop"></p>
     <!-- Header -->
     <div id="includedHeader" class="container-fluid m-0"></div>
     <!-- Container principal -->
@@ -109,7 +116,7 @@
 
     <!-- Form Contact -->
     <div id="includedFormContact" class="container-fluid mt-4"></div>
-    
+
     <!-- Footer -->
     <div id="includedFooter" class="container-fluid"></div>
     <!-- JS CLUBS -->
@@ -138,6 +145,23 @@
         $("#includedFormContact").load("./templates/formContact.html");
         $("#includedHeader").load("./templates/header.html");
         $("#includedFooter").load("./templates/footer.html");
+      });
+    </script>
+    <!--BACK TO TOP SCRIPT-->
+    <script>
+      var btn = $("#backToTop");
+
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+          btn.addClass("show");
+        } else {
+          btn.removeClass("show");
+        }
+      });
+
+      btn.on("click", function (e) {
+        e.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "300");
       });
     </script>
   </body>
