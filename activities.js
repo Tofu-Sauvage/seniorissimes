@@ -15,12 +15,13 @@ function getWeatherBreizh() {
   weatherConditions.onload = function () {
     if (weatherConditions.status === 200) {
       weatherResult = JSON.parse(weatherConditions.responseText);
-
+      
       let resultDiv = document.getElementById("resultDiv");
-      resultDiv.innerHTML = `${weatherResult.name}<img src="http://openweathermap.org/img/w/${weatherResult.weather[0].icon}.png"/><br>Température: ${weatherResult.main.temp}&deg;<br>Description: ${weatherResult.weather[0].description}<br>Ciel couvert à ${weatherResult.clouds.all}%<hr/>`;
+      resultDiv.innerHTML = `${weatherResult.name}<img src="http://openweathermap.org/img/w/${weatherResult.weather[0].icon}.png"/><br>Température: ${weatherResult.main.temp}&deg;<br>Description: ${weatherResult.weather[0].description}<br>Ciel couvert à ${weatherResult.clouds.all} %<br>Humidité à ${weatherResult.main.humidity} %<hr/>`;
 
       let resultActi = document.getElementById("resultActi");
-      if (weatherResult.main.temp < 12) {
+      
+      if (weatherResult.main.temp < 12 || weatherResult.main.humidity >= 70) {
         resultActi.innerHTML =
           "Attention il fait froid, jouez au scrabble près d'un radiateur.";
         $.getScript("loadActivitiesInt.js");
@@ -63,7 +64,7 @@ function getWeatherMarseille() {
 
       let resultActi = document.getElementById("resultActi");
       document.getElementById('activitiesList').innerHTML = ""
-      if (weatherResult.main.temp < 12) {
+      if (weatherResult.main.temp < 12 || weatherResult.main.humidity >= 70) {
         resultActi.innerHTML =
           "Attention il fait froid, jouez au scrabble près d'un radiateur.";
           $.getScript("loadActivitiesInt.js");
@@ -103,7 +104,7 @@ function getWeatherCalais() {
       resultDiv.innerHTML = `${weatherResult.name}<img src="http://openweathermap.org/img/w/${weatherResult.weather[0].icon}.png"/><br>Température: ${weatherResult.main.temp}&deg;<br>Description: ${weatherResult.weather[0].description}<br>Ciel couvert à ${weatherResult.clouds.all}%<hr/>`;
 
       let resultActi = document.getElementById("resultActi");
-      if (weatherResult.main.temp < 12) {
+      if (weatherResult.main.temp < 12 || weatherResult.main.humidity >= 70) {
         resultActi.innerHTML =
           "Attention il fait froid, jouez au scrabble près d'un radiateur.";
           $.getScript("loadActivitiesInt.js");

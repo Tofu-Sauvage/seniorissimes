@@ -13,8 +13,8 @@ let requestJsonInt = new XMLHttpRequest();
     let html = "";
 
     activitiesInt.forEach(element => {
-      html += `<div class="col-lg-4 col-md-4 col-sm-12 mb-4">`
-      html += ` <div class="card" style="width: 18rem;">`;
+      html += `<div class="col-lg-6 col-md-6 col-sm-12 mb-4">`
+      html += ` <div class="card">`;
       html += `  <img src="${element.img}" class="card-img-top" alt="...">`;
       html += `  <div class="card-body">`;
       html += `    <h5 class="card-title">${element.name}</h5>`;

@@ -3,59 +3,59 @@
     {
       "name": "Loisirs créatifs",
       "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
-      "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
+      "description": "Donnez libre cours à votre créativité en nous rejoignant à notre activité loisirs créatifs. Les possibilités sont diverses,: pastels, peinture, origami, arts and crafts etc... Chaque activité est accompagnée d'une personne expérimentée pour conseiller nos apprentis créateurs. A vos pinceaux!"
     },
     {
       "name": "Puzzles",
       "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
-      "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
+      "description": " Il fait froid dehors? Ou trop chaud? Venez donc puzzler! Nous mettons à votre disposition de nombreux puzzles pour débutant ou expérimentés. Les thèmes proposés sont divers et variés.Idéal pour se détendre! A vos pièces!!"
     },
     {
       "name": "Lecture",
       "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
-      "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
+      "description": "Venez découvrir notre bibliothèque de rêve. De nombreux ouvrages sont proposés. Romans policiers, littérature sentimentale, BD ou magazines? Vous trouverez tous ces thèmes et bien plus encore sur nos étagères. Notre espace lecture est composé de fauteuils confortables et une bonne luminosité, idéal pour un moment détente."
     },
     {
       "name": "Relaxation",
       "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
-      "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
+      "description": "Nous proposons des séances de relaxation guidées par un(e ) psychothérapeute spécialisé(e) dans la relaxation. Les séances se déroulent dans une salle adaptée au sein même du club. Au programme: exercices de respiration et visualisation. Veillez à porter des vêtements amples pour être à l'aise et venez partager avec nous un moment de relaxation pour être bien dans son corps et son esprit!"
     },
     {
       "name": "Cuisine",
       "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
-      "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
+      "description": "Venez participer à nos ateliers cuisine.  Une personne expérimentée vous apprendra des recettes diverses et variées pour ravir vos palais (gâteaux, tartes, macarons etc...). A vos tabliers!"
     },
     {
       "name": "Jeux de société",
       "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
-      "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
+      "description": "Nous mettons à votre disposition de nombreux jeux de sociétés: Scrabble, dominos, jeu de l'oie, jeux d'échecs, Monopoly, Vrivial Pursuit, etc.... Idéal pour un moment de jeu en groupe. A vos dés!"
     },
     {
       "name": "Visite de musée/expo (extérieur au club)",
       "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
-      "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
+      "description": "Régulièrement, des visites sont organisées au gré des plannings culturels de la ville. "
     }
   ],
   "ext-activities": [
     {
       "name": "Balade à vélo",
       "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
-      "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
+      "description": "Venez découvrir nos super randos vélos! Nos balades vélos sont accessibles au débutants comme aux expérimentés . Les vélos sont fournis par le club, vous n'avez plus qu'à vous présenter. A vos pédales!!"
     },
     {
       "name": "Jardinage",
       "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
-      "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
+      "description": "Venez prendre soin de notre potager local. Vous pourrez au gré des saisons, planter ou récolter, légumes et fleurs de saisons. Chaque activité de jardinage est accompagnée par une personne expérimentée pour guider nos jardiniers en herbe. Les outils sont fournis par les clubs. Pensez à vous habillez de façon adéquate. Bon jardinage!"
     },
     {
       "name": "Bricolage (établi dehors)",
       "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
-      "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
+      "description": "Vous trouverez un établi bien fourni pour permettre à nos bricoleurs de débrider leur créativité et fabriquer toutes sortes de choses. Des outils sont fournis pour de la petite menuiserie et petite métallurgie. Une personne expérimentée dans le domaine sera présente pour cette activité afin de guider nos apprentis bricoleurs. A vos outils!"
     },
     {
       "name": "Marche",
       "img": "https://cdn.pixabay.com/photo/2018/04/20/16/25/senior-3336451_960_720.jpg",
-      "description": "No. We're on the top. Come, Comrade Bender! We must take to the streets!"
+      "description": "Venez découvrir nos balades en groupe. Nos randonnées pédestres sont accessibles aux débutants et se font dans la joie et la bonne humeur. Veillez à emporter une bouteille d'eau avec vous. Et endossez vos sacs à dos pour prendre la route avec nous!"
     }
   ]
 }
