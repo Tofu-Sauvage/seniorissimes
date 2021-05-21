@@ -89,6 +89,22 @@ h6 {
   opacity: 1;
   visibility: visible;
 }
+#backToTop .toTopText {
+  visibility: hidden;
+  width: 200px;
+  background-color: #4881d2;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: -50px;
+  left: -250%;
+}
+#backToTop:hover .toTopText {
+  visibility: visible;
+}
 
 /* Bouton */
 .btn-custom {
@@ -97,21 +113,19 @@ h6 {
   border-color: #eb7b29;
   transition: none;
 }
-
-  /* Bouton */
-  .btn-primary {
-    color: #fff;
-    background-color: #c45345;
-    border-color:  #c45345;
+.btn-custom:hover {
+  color: #fff;
+  background-color: #f89544;
+  border-color: #f89544;
 }
 
-.card-img-top{
+.card-img-top {
   max-height: 250px;
   object-fit: cover;
   object-position: top;
 }
 
-.icon-weather{
+.icon-weather {
   background: linear-gradient(rgba(196, 83, 69, 0.5), rgba(0, 105, 217, 0.5));
   border-radius: 10px 0 0 10px;
 }
@@ -121,10 +135,5 @@ h6 {
 }
 
 .rounded {
-  border-radius: 0.75rem!important;
-}
-.btn-custom:hover {
-  color: #fff;
-  background-color: #f89544;
-  border-color: #f89544;
+  border-radius: 0.75rem !important;
 }
