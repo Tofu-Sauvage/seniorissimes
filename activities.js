@@ -31,7 +31,7 @@ function getWeatherBreizh() {
       resultDiv.innerHTML = `
       <div class="card">
         <div class="row no-gutters border rounded">
-          <div class="col-md-3 d-flex justify-content-center align-items-center">
+          <div class="col-md-3 d-flex justify-content-center align-items-center icon-weather">
             <img src="http://openweathermap.org/img/wn/${weatherResult.weather[0].icon}@4x.png"/>
           </div>
           <div class="col-md-9">
@@ -80,13 +80,16 @@ function getWeatherBreizh() {
       } else {
         resultActi.innerHTML =
           "Il fait bon, sortez respirer le bon air, vous vivrez plus longtemps.";
+          if (weatherResult.main.temp > 30) 
+            resultActi.innerHTML += "<br> Pensez à prendre une bouteille d'eau : <strong>il fait chaud !</strong>";
+          
           $.getScript("loadActivitiesExt.js");
           $.getScript("loadActivitiesInt.js");
       }
 
-      let buttonrefresh = document.getElementById("buttonRefresh");
-      buttonRefresh.innerHTML =
-        "<button type='button' class='btn btn-primary mb-4' onClick='window.location.reload()'>Recommencer</button>";
+      // let buttonrefresh = document.getElementById("buttonRefresh");
+      // buttonRefresh.innerHTML =
+      //   "<button type='button' class='btn btn-primary mb-4' onClick='window.location.reload()'>Recommencer</button>";
     } else {
       alert(
         "Il semble que les informations envoyées sont incorrectes, merci de vérifier et de renvoyer le formulaire."
@@ -126,7 +129,7 @@ function getWeatherMarseille() {
       resultDiv.innerHTML = `
       <div class="card">
         <div class="row no-gutters border rounded">
-          <div class="col-md-3 d-flex justify-content-center align-items-center">
+          <div class="col-md-3 d-flex justify-content-center align-items-center icon-weather">
             <img src="http://openweathermap.org/img/wn/${weatherResult.weather[0].icon}@4x.png"/>
           </div>
           <div class="col-md-9">
@@ -175,13 +178,16 @@ function getWeatherMarseille() {
       } else {
         resultActi.innerHTML =
           "Il fait bon, sortez respirer le bon air, vous vivrez plus longtemps.";
+          if (weatherResult.main.temp > 30) 
+            resultActi.innerHTML += "<br> Pensez à prendre une bouteille d'eau : <strong>il fait chaud !</strong>";
+          
           $.getScript("loadActivitiesExt.js");
           $.getScript("loadActivitiesInt.js");
       }
 
-      let buttonrefresh = document.getElementById("buttonRefresh");
-      buttonRefresh.innerHTML =
-        "<button type='button' class='btn btn-primary mb-4' onClick='window.location.reload()'>Recommencer</button>";
+      // let buttonrefresh = document.getElementById("buttonRefresh");
+      // buttonRefresh.innerHTML =
+      //   "<button type='button' class='btn btn-primary mb-4' onClick='window.location.reload()'>Recommencer</button>";
     } else {
       alert(
         "Il semble que les informations envoyées sont incorrectes, merci de vérifier et de renvoyer le formulaire."
@@ -219,7 +225,7 @@ function getWeatherCalais() {
       resultDiv.innerHTML = `
       <div class="card">
         <div class="row no-gutters border rounded">
-          <div class="col-md-3 d-flex justify-content-center align-items-center">
+          <div class="col-md-3 d-flex justify-content-center align-items-center icon-weather">
             <img src="http://openweathermap.org/img/wn/${weatherResult.weather[0].icon}@4x.png"/>
           </div>
           <div class="col-md-9">
@@ -268,14 +274,17 @@ function getWeatherCalais() {
       } else {
         resultActi.innerHTML =
           "Il fait bon, sortez respirer le bon air, vous vivrez plus longtemps.";
+          if (weatherResult.main.temp > 30) 
+            resultActi.innerHTML += "<br> Pensez à prendre une bouteille d'eau : <strong>il fait chaud !</strong>";
+          
           $.getScript("loadActivitiesExt.js");
           $.getScript("loadActivitiesInt.js");
           
       }
 
-      let buttonrefresh = document.getElementById("buttonRefresh");
-      buttonRefresh.innerHTML =
-        "<button type='button' class='btn btn-primary mb-4' onClick='window.location.reload()'>Recommencer</button>";
+      // let buttonrefresh = document.getElementById("buttonRefresh");
+      // buttonRefresh.innerHTML =
+      //   "<button type='button' class='btn btn-primary mb-4' onClick='window.location.reload()'>Recommencer</button>";
     } else {
       alert(
         "Il semble que les informations envoyées sont incorrectes, merci de vérifier et de renvoyer le formulaire."
