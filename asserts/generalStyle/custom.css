@@ -98,6 +98,31 @@ h6 {
   transition: none;
 }
 
+  /* Bouton */
+  .btn-primary {
+    color: #fff;
+    background-color: #c45345;
+    border-color:  #c45345;
+}
+
+.card-img-top{
+  max-height: 250px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.icon-weather{
+  background: linear-gradient(rgba(196, 83, 69, 0.5), rgba(0, 105, 217, 0.5));
+  border-radius: 10px 0 0 10px;
+}
+
+#resultDiv .card {
+  border: 0;
+}
+
+.rounded {
+  border-radius: 0.75rem!important;
+}
 .btn-custom:hover {
   color: #fff;
   background-color: #f89544;
