@@ -8,6 +8,10 @@ h6 {
   font-family: "Roboto Condensed", sans-serif !important;
 }
 
+.custom-text {
+  font-weight: bold;
+}
+
 /* HEADER */
 #includedHeader {
   background-image: url("senior_header.png");
