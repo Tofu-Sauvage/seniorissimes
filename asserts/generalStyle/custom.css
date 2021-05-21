@@ -9,8 +9,12 @@ h6 {
 }
 
 html {
-  overflow-y: scroll;
   scroll-behavior: smooth;
+}
+
+h1{ 
+  font-size:400%;
+  margin-bottom: 0;
 }
 
 .custom-text {
@@ -28,7 +32,7 @@ html {
 }
 
 #includedHeader h1 {
-  padding-top: 3%;
+  padding-top: 1%;
   font-weight: bolder;
 }
 
@@ -57,7 +61,7 @@ html {
 }
 
 #footer {
-  width: 50vh;
+  width: 60vh;
   justify-content: center;
   margin: 0 auto;
 }
