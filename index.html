@@ -35,7 +35,9 @@
   </head>
   <body>
     <!-- Back to top button -->
-    <p id="backToTop"><span class="toTopText">Retour en haut de la page</span></p>
+    <p id="backToTop">
+      <span class="toTopText">Retour en haut de la page</span>
+    </p>
     <!-- Header -->
     <div id="includedHeader" class="container-fluid m-0"></div>
     <!-- Container principal -->
@@ -50,15 +52,22 @@
         Nos clubs vous proposent chaque jour des activités en adéquation avec la
         météo. Laissez-nous faire et ne vous souciez plus des caprices du temps.
       </p>
-
+      <h3 class="mb-5">Choississez un club et consultez les activités que nous vous proposons aujourd'hui</h3>
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-12">
           <div class="card" style="">
             <div id="club-sud-img"></div>
             <div class="card-body">
               <h5 id="club-sud-name" class="card-title"></h5>
-              <p class="card-text">Responsable du site : <span id="club-sud-owner"></span></p>
-              <p class="card-text">Adresse : <span id="club-sud-adress"></span></p>
+              <p class="card-text">
+                Responsable du site : <br /><span id="club-sud-owner"></span>
+              </p>
+              <p class="card-text">
+                Adresse : <br /><span id="club-sud-adress"></span>
+              </p>
+              <p class="card-text">
+                Téléphone : <span id="club-sud-phone"></span>
+              </p>
               <button
                 type="button"
                 class="btn btn-custom"
@@ -75,8 +84,15 @@
             <div id="club-nord-img"></div>
             <div class="card-body">
               <h5 id="club-nord-name" class="card-title"></h5>
-              <p class="card-text">Responsable du site : <span id="club-sud-owner"></span></p>
-              <p class="card-text">Adresse : <span id="club-sud-adress"></span></p>
+              <p class="card-text">
+                Responsable du site : <br /><span id="club-nord-owner"></span>
+              </p>
+              <p class="card-text">
+                Adresse : <br /><span id="club-nord-adress"></span>
+              </p>
+              <p class="card-text">
+                Téléphone : <span id="club-nord-phone"></span>
+              </p>
               <button
                 type="button"
                 class="btn btn-custom"
@@ -93,8 +109,15 @@
             <div id="club-breizh-img"></div>
             <div class="card-body">
               <h5 id="club-breizh-name" class="card-title"></h5>
-              <p class="card-text">Responsable du site : <span id="club-sud-owner"></span></p>
-              <p class="card-text">Adresse : <span id="club-sud-adress"></span></p>
+              <p class="card-text">
+                Responsable du site : <br /><span id="club-breizh-owner"></span>
+              </p>
+              <p class="card-text">
+                Adresse : <br /><span id="club-breizh-adress"></span>
+              </p>
+              <p class="card-text">
+                Téléphone : <span id="club-breizh-phone"></span>
+              </p>
               <button
                 type="button"
                 class="btn btn-custom"
@@ -111,7 +134,7 @@
 
     <div class="container mt-4 pt-4">
       <!-- Weather -->
-      <h2 id="dayWeatherTitle"></h2>
+      <h2 id="dayWeatherTitle" class="mb-5"></h2>
       <div id="resultDiv" style="margin-bottom: 20px"></div>
 
       <!-- Activity -->
@@ -122,7 +145,7 @@
     </div>
 
     <div class="container mt-4 pt-4">
-      <h2 id="dayActivitiesTitle"></h2>
+      <h2 id="dayActivitiesTitle" class="mb-5"></h2>
       <div id="activitiesList" class="row"></div>
     </div>
 
