@@ -128,3 +128,8 @@ h6 {
   background-color: #f89544;
   border-color: #f89544;
 }
+
+.btn.focus, .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(248 149 68 / 25%);
+}
