@@ -8,6 +8,11 @@ h6 {
   font-family: "Roboto Condensed", sans-serif !important;
 }
 
+h1{ 
+  font-size:400%;
+  margin-bottom: 0;
+}
+
 .custom-text {
   font-weight: bold;
 }
@@ -23,7 +28,7 @@ h6 {
 }
 
 #includedHeader h1 {
-  padding-top: 3%;
+  padding-top: 1%;
   font-weight: bolder;
 }
 
@@ -52,7 +57,7 @@ h6 {
 }
 
 #footer {
-  width: 50vh;
+  width: 60vh;
   justify-content: center;
   margin: 0 auto;
 }
