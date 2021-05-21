@@ -8,6 +8,11 @@ h6 {
   font-family: "Roboto Condensed", sans-serif !important;
 }
 
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
 .custom-text {
   font-weight: bold;
 }

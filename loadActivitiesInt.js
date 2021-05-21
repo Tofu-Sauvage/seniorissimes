@@ -20,6 +20,7 @@
       html += `  <div class="card-body">`;
       html += `    <h5 class="card-title">${element.name}</h5>`;
       html += `    <p class="card-text">${element.description}</p>`;
+      html += `    <a role="button" class="btn btn-custom btn-sm" href="#includedFormContact">En savoir plus</a>`;
       html += `  </div>`;
       html += ` </div>`
       html += `</div>`
