@@ -13,13 +13,17 @@
     let activitiesExt = activities["ext-activities"];
     let html = "";
 
+    let warningHot = "";
+    if (weatherResult.main.temp > 30) 
+      warningHot = "<strong>Pensez à prendre une bouteille d'eau : il fait chaud !</strong><br>";
+
     activitiesExt.forEach(element => {
       html += `<div class="col-lg-6 col-md-6 col-sm-12 mb-4">`
       html += ` <div class="card">`;
       html += `  <img src="${element.img}" class="card-img-top" alt="...">`;
       html += `  <div class="card-body">`;
       html += `    <h5 class="card-title">${element.name}</h5>`;
-      html += `    <p class="card-text">${element.description}</p>`;
+      html += `    <p class="card-text">${warningHot}${element.description}</p>`;
       html += `  </div>`;
       html += ` </div>`
       html += `</div>`

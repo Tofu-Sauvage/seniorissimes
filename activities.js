@@ -74,15 +74,8 @@ function getWeatherBreizh() {
       let resultActi = document.getElementById("resultActi");
       document.getElementById('activitiesList').innerHTML = ""
       if (weatherResult.main.temp < 12 || weatherResult.main.humidity >= 70) {
-        resultActi.innerHTML =
-          "Attention il fait froid, jouez au scrabble près d'un radiateur.";
         $.getScript("loadActivitiesInt.js");
       } else {
-        resultActi.innerHTML =
-          "Il fait bon, sortez respirer le bon air, vous vivrez plus longtemps.";
-          if (weatherResult.main.temp > 30) 
-            resultActi.innerHTML += "<br> Pensez à prendre une bouteille d'eau : <strong>il fait chaud !</strong>";
-          
           $.getScript("loadActivitiesExt.js");
           $.getScript("loadActivitiesInt.js");
       }
@@ -172,15 +165,8 @@ function getWeatherMarseille() {
       let resultActi = document.getElementById("resultActi");
       document.getElementById('activitiesList').innerHTML = ""
       if (weatherResult.main.temp < 12 || weatherResult.main.humidity >= 70) {
-        resultActi.innerHTML =
-          "Attention il fait froid, jouez au scrabble près d'un radiateur.";
           $.getScript("loadActivitiesInt.js");
       } else {
-        resultActi.innerHTML =
-          "Il fait bon, sortez respirer le bon air, vous vivrez plus longtemps.";
-          if (weatherResult.main.temp > 30) 
-            resultActi.innerHTML += "<br> Pensez à prendre une bouteille d'eau : <strong>il fait chaud !</strong>";
-          
           $.getScript("loadActivitiesExt.js");
           $.getScript("loadActivitiesInt.js");
       }
@@ -268,15 +254,8 @@ function getWeatherCalais() {
       let resultActi = document.getElementById("resultActi");
       document.getElementById('activitiesList').innerHTML = ""
       if (weatherResult.main.temp < 12 || weatherResult.main.humidity >= 70) {
-        resultActi.innerHTML =
-          "Attention il fait froid, jouez au scrabble près d'un radiateur.";
           $.getScript("loadActivitiesInt.js");
       } else {
-        resultActi.innerHTML =
-          "Il fait bon, sortez respirer le bon air, vous vivrez plus longtemps.";
-          if (weatherResult.main.temp > 30) 
-            resultActi.innerHTML += "<br> Pensez à prendre une bouteille d'eau : <strong>il fait chaud !</strong>";
-          
           $.getScript("loadActivitiesExt.js");
           $.getScript("loadActivitiesInt.js");
           
