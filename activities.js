@@ -42,8 +42,8 @@ function getWeatherBreizh() {
               <div class="row">
                 <div class="col-md-4">
                   <div class="card-body">
-                    <p class="card-text mb-auto">Température: ${Math.round(weatherResult.main.temp)}&deg;C</p>
-                    <p class="card-text">Description: ${weatherResult.weather[0].description}</p>
+                  <p class="card-text capitalize">Description: <strong>${weatherResult.weather[0].description}</strong></p>
+                  <p class="card-text mb-auto">Température: ${Math.round(weatherResult.main.temp)}&deg;C</p>
                     <p class="card-text mb-auto">Ciel couvert à ${weatherResult.clouds.all} %</p>
                     <p class="card-text">Humidité à ${weatherResult.main.humidity} %</p>
                   </div>
@@ -140,8 +140,8 @@ function getWeatherMarseille() {
               <div class="row">
                 <div class="col-md-4">
                   <div class="card-body">
+                  <p class="card-text capitalize">Description: <strong>${weatherResult.weather[0].description}</strong></p>
                   <p class="card-text mb-auto">Température: ${Math.round(weatherResult.main.temp)}&deg;C</p>
-                  <p class="card-text">Description: ${weatherResult.weather[0].description}</p>
                   <p class="card-text mb-auto">Ciel couvert à ${weatherResult.clouds.all} %</p>
                   <p class="card-text">Humidité à ${weatherResult.main.humidity} %</p>
                 </div>
@@ -236,8 +236,8 @@ function getWeatherCalais() {
               <div class="row">
                 <div class="col-md-4">
                   <div class="card-body">
+                  <p class="card-text capitalize">Description: <strong>${weatherResult.weather[0].description}</strong></p>
                   <p class="card-text mb-auto">Température: ${Math.round(weatherResult.main.temp)}&deg;C</p>
-                  <p class="card-text">Description: ${weatherResult.weather[0].description}</p>
                   <p class="card-text mb-auto">Ciel couvert à ${weatherResult.clouds.all} %</p>
                   <p class="card-text">Humidité à ${weatherResult.main.humidity} %</p>
                 </div>

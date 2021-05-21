@@ -126,7 +126,7 @@ h6 {
 }
 
 .icon-weather {
-  background: linear-gradient(rgba(196, 83, 69, 0.5), rgba(0, 105, 217, 0.5));
+  background: rgb(186 181 171 / 50%);
   border-radius: 10px 0 0 10px;
 }
 
@@ -141,4 +141,8 @@ h6 {
 .btn.focus, .btn:focus {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgb(248 149 68 / 25%);
+}
+
+.capitalize{
+  text-transform: capitalize;
 }
