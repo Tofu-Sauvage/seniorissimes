@@ -27,7 +27,7 @@ h6 {
 #includedFooter {
   padding-top: 3%;
   min-height: 15vh;
-  background-color: #c45345;
+  background-color: #eb7b29;
   color: white;
 }
 
@@ -55,40 +55,48 @@ h6 {
 
 /* BACK TO TOP BUTTON */
 #backToTop {
-    display: inline-block;
-    background-color: #c45345;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    border-radius: 4px;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1000;
-  }
-  #backToTop::after {
-    content: "\f077";
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 2em;
-    line-height: 50px;
-    color: #fff;
-  }
-  #backToTop:hover {
-    cursor: pointer;
-    background-color: #f9bc8b;
-  }
-  #backToTop:active {
-    background-color:#e27c4b;
-  }
-  #backToTop.show {
-    opacity: 1;
-    visibility: visible;
-  }
+  display: inline-block;
+  background-color: #eb7b29;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#backToTop::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#backToTop:hover {
+  cursor: pointer;
+  background-color: #f9bc8b;
+}
+#backToTop:active {
+  background-color: #eb7b29;
+}
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Bouton */
+.btn-custom {
+  color: #fff;
+  background-color: #eb7b29;
+  border-color: #eb7b29;
+  transition: none;
+}
 
   /* Bouton */
   .btn-primary {
@@ -114,4 +122,9 @@ h6 {
 
 .rounded {
   border-radius: 0.75rem!important;
+}
+.btn-custom:hover {
+  color: #fff;
+  background-color: #f89544;
+  border-color: #f89544;
 }

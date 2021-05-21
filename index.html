@@ -61,9 +61,9 @@
               <p id="club-sud-adress" class="card-text"></p>
               <button
                 type="button"
-                class="btn btn-primary"
+                class="btn btn-custom"
                 id="btnGetWeather"
-                onclick="getWeatherMarseille()"
+                onclick="getWeatherMarseille(); displayTitles()"
               >
                 Nos activités
               </button>
@@ -79,9 +79,9 @@
               <p id="club-nord-adress" class="card-text"></p>
               <button
                 type="button"
-                class="btn btn-primary"
+                class="btn btn-custom"
                 id="btnGetWeather"
-                onclick="getWeatherCalais()"
+                onclick="getWeatherCalais(); displayTitles()"
               >
                 Nos activités
               </button>
@@ -97,9 +97,9 @@
               <p id="club-breizh-adress" class="card-text"></p>
               <button
                 type="button"
-                class="btn btn-primary"
+                class="btn btn-custom"
                 id="btnGetWeather"
-                onclick="getWeatherBreizh()"
+                onclick="getWeatherBreizh(); displayTitles()"
               >
                 Nos activités
               </button>
@@ -111,6 +111,7 @@
 
     <div class="container mt-4 pt-4">
       <!-- Weather -->
+      <h2 id="dayWeatherTitle"></h2>
       <div id="resultDiv" style="margin-bottom: 20px"></div>
 
       <!-- Activity -->
@@ -121,6 +122,7 @@
     </div>
 
     <div class="container mt-4 pt-4">
+      <h2 id="dayActivitiesTitle"></h2>
       <div id="activitiesList" class="row"></div>
     </div>
 
