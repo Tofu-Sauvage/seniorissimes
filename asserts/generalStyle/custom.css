@@ -137,3 +137,8 @@ h6 {
 .rounded {
   border-radius: 0.75rem !important;
 }
+
+.btn.focus, .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(248 149 68 / 25%);
+}
